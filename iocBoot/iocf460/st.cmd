@@ -1,4 +1,4 @@
-#!../../bin/linux-x86/f460
+#!../../bin/linux-x86_64/f460
 
 < envPaths
 
@@ -13,7 +13,7 @@ epicsEnvSet("Sys", "E1:")
 epicsEnvSet("Dev", "F460:")
 epicsEnvSet("PORT", "E1")
 
-drvAsynIPPortConfigure("$(PORT)", "10.0.0.11:4001")
+drvAsynIPPortConfigure("$(PORT)", "192.168.10.209:4001")
 
 #drvAsynSerialPortConfigure("$(PORT)", "/dev/ttyS0")
 #asynOctetSetInputEos("$(PORT)",0,"\r\n")
@@ -28,7 +28,7 @@ drvAsynIPPortConfigure("$(PORT)", "10.0.0.11:4001")
 #asynSetTraceIOMask("$(PORT)",0,"0x2")
 
 ## Load records
-dbLoadRecords("db/F460.db", "Sys=$(Sys),Dev=$(Dev),PORT=$(PORT),PINI=YES,BUFSZ=12,PREC=9")
+dbLoadRecords("db/F460.db", "Sys=$(Sys),Dev=$(Dev),PORT=$(PORT),PINI=YES,BUFSZ=100,PREC=9,SCAN=1 second")
 dbLoadRecords("db/asyn.db", "Sys=$(Sys),Dev=$(Dev),PORT=$(PORT),ADDR=0")
 
 cd ${TOP}/iocBoot/${IOC}/

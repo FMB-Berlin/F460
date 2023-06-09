@@ -1,0 +1,710 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 951
+y 517
+w 410
+h 450
+font "helvetica-medium-r-12.0"
+ctlFont "helvetica-bold-r-12.0"
+btnFont "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 25
+ctlFgColor2 index 30
+ctlBgColor1 index 3
+ctlBgColor2 index 3
+topShadowColor index 0
+botShadowColor index 14
+title "F460 Trigger"
+showGrid
+snapToGrid
+gridSize 5
+disableScroll
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 5
+y 310
+w 400
+h 75
+lineColor index 14
+fillColor index 3
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 0
+y 0
+w 410
+h 25
+font "helvetica-bold-r-18.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 6
+value {
+  "F460 Trigger Settings [$(P)$(R)]"
+}
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 135
+y 395
+w 140
+h 25
+fgColor index 45
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 14
+label "Close"
+font "helvetica-bold-r-12.0"
+3d
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 145
+y 60
+w 120
+h 25
+fgColor index 25
+bgColor index 3
+inconsistentColor index 3
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(P)$(R)Cmd:TrigMode"
+font "helvetica-bold-r-12.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 275
+y 60
+w 120
+h 25
+controlPv "$(P)$(R)TrigMode-I"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 145
+y 245
+w 120
+h 25
+controlPv "$(P)$(R)Per-SP"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 3
+editable
+precision 4
+nullColor index 30
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 65
+y 65
+w 74
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Trigger mode"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 250
+w 128
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Avg period (integration)"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 275
+y 245
+w 120
+h 25
+controlPv "$(P)$(R)Per-I"
+format "exponential"
+font "courier-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 275
+y 120
+w 120
+h 25
+controlPv "$(P)$(R)TrigPause-I"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 145
+y 120
+w 120
+h 25
+fgColor index 25
+bgColor index 3
+inconsistentColor index 3
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(P)$(R)Cmd:TrigPause"
+font "helvetica-bold-r-12.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 25
+y 125
+w 115
+h 15
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Pause trigger source"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 275
+y 90
+w 120
+h 25
+controlPv "$(P)$(R)TrigStart-I"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 145
+y 90
+w 120
+h 25
+fgColor index 25
+bgColor index 3
+inconsistentColor index 3
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(P)$(R)Cmd:TrigStart"
+font "helvetica-bold-r-12.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 35
+y 90
+w 103
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Start trigger source"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 275
+y 150
+w 120
+h 25
+controlPv "$(P)$(R)TrigStop-I"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 145
+y 150
+w 120
+h 25
+fgColor index 25
+bgColor index 3
+inconsistentColor index 3
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(P)$(R)Cmd:TrigStop"
+font "helvetica-bold-r-12.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 35
+y 155
+w 103
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Stop trigger source"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 190
+w 57
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Buffer size"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 275
+y 185
+w 120
+h 25
+controlPv "$(P)$(R)BufSz-I"
+font "courier-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+limitsFromDb
+precision 4
+nullColor index 30
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 145
+y 185
+w 120
+h 25
+controlPv "$(P)$(R)BufSz-SP"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 3
+editable
+precision 4
+nullColor index 30
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 75
+y 220
+w 61
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Burst count"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 275
+y 215
+w 120
+h 25
+controlPv "$(P)$(R)Burst-I"
+font "courier-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+limitsFromDb
+precision 4
+nullColor index 30
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 145
+y 215
+w 120
+h 25
+controlPv "$(P)$(R)Burst-SP"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 3
+editable
+precision 4
+nullColor index 30
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 275
+y 350
+w 120
+h 25
+controlPv "$(P)$(R)Mon-I"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 145
+y 350
+w 120
+h 25
+fgColor index 25
+bgColor index 3
+inconsistentColor index 3
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(P)$(R)Mon-SP"
+font "helvetica-bold-r-12.0"
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 145
+y 320
+w 120
+h 25
+fgColor index 25
+bgColor index 3
+inconsistentColor index 3
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(P)$(R)Freq-SP"
+font "helvetica-bold-r-12.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 275
+y 320
+w 120
+h 25
+controlPv "$(P)$(R)Freq-I"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 30
+y 325
+w 108
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "TTL mapping mode"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 50
+y 355
+w 90
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Position function"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 5
+y 30
+w 95
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Trigger settings"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 5
+y 290
+w 118
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "TTL output settings"
+}
+autoSize
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 5
+y 50
+w 400
+h 230
+lineColor index 14
+fillColor index 3
+endObjectProperties
+

@@ -25,6 +25,7 @@ record(mbbo, "$(Sys)$(Dev)Pid:Mode-SP") {
   field(SCAN, "Passive")
   field(DTYP, "stream")
   field(OUT, "@F460.protocol writeInt($(Sys)$(Dev),CONF:PID:MOD) $(PORT) 0")
+  field(FLNK, "$(Sys)$(Dev)Pid:Mode-I")
 
   field(ZRVL, 0)
   field(ONVL, 1)
@@ -243,7 +244,7 @@ record(ao, "$(Sys)$(Dev)Pid:Ref-SP") {
   field(SCAN, "Passive")
   field(OUT, "@F460.protocol writeFloat($(Sys)$(Dev),CONF:PID:REF) $(PORT) 0")
   field(FLNK, "$(Sys)$(Dev)Pid:Ref-I")
-  info(autosaveFields_pass0, "VAL")
+  info(autosaveFields_pass0, "VAL DOL")
 }
 
 # CONF:PID:PROF:LIMit LO, HI, NumPts
@@ -377,19 +378,17 @@ record(bo, "$(Sys)$(Dev)Pid:Enable-Out") {
   field(OUT, "@F460.protocol writeInt($(Sys)$(Dev),PID:SERV) $(PORT) 0")
   field(ZNAM, "PID off")
   field(ONAM, "PID on")
-  field(FLNK, "$(Sys)$(Dev)Pid:Enable-I")
+  field(FLNK, "$(Sys)$(Dev)Pid:Enable-Rbv")
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "$(Sys)$(Dev)Pid:Enable-I") {
-  field(DESC, "PID enable")
-  field(DTYP, "stream")
-  field(PINI, "$(PINI)")
-  field(INP, "@F460.protocol readInt($(Sys)$(Dev),PID:SERV) $(PORT) 0")
-  field(ZNAM, "PID off")
-  field(ONAM, "PID on")
-}
+record(seq, "$(Sys)$(Dev)Pid:Enable-Rbv") {
+  field(DESC, "delay the readback")
 
+  field(DLY1, "1")
+  field(DOL1, "1")
+  field(LNK1, "$(Sys)$(Dev)Pid:Cmd:Rd.PROC")
+}
 
 #
 #
@@ -409,17 +408,16 @@ record(bo, "$(Sys)$(Dev)Pid:Cmd:Rd") {
   field(ZNAM, "Read PID")
   field(ONAM, "Read PID")
   field(OUT, "@F460.protocol get1PID($(Sys)$(Dev),Pid,PID) $(PORT) 0")
-  field(FLNK, "$(Sys)$(Dev)Pid:Enabled-I")
-#  field(TPRO, 1)
+  field(FLNK, "$(Sys)$(Dev)Pid:Enable-I")
   #field(SCAN, "Passive")
   #field(SCAN, "1 second")
 }
 
-record(bi, "$(Sys)$(Dev)Pid:Enabled-I") {
+record(bi, "$(Sys)$(Dev)Pid:Enable-I") {
   # Enabled according to fetch
-  #field(DESC, "(PID enabled)")
-  field(ONAM, "PID Enabled")
-  field(ONAM, "PID Disabled")
+  field(DESC, "(PID enabled)")
+  field(ONAM, "PID on")
+  field(ZNAM, "PID off")
   field(FLNK, "$(Sys)$(Dev)Pid:InitV-I")
 }
 

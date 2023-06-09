@@ -1,0 +1,17 @@
+#ignore build directories
+bin/*
+db/*
+dbd/*
+#ignore temporary build stuff
+O.*
+
+#ignore envs
+envPaths
+
+#ignore envs and version file
+envPaths
+versionVar
+
+#edl backup files
+*.edl~
+

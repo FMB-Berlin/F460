@@ -21,19 +21,17 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 #If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
 
-SUPPORT=/epics/support
+SUPPORT=/opt/epics/modules
 
-# Newer StreamDevice may be required than the one on the repo
-STREAM=$(TOP)/StreamDevice
-
-# And as such, newer asyn required:
-ASYN=$(SUPPORT)/asyn/4-18/
-
-#STREAM=/usr/lib/epics
-#ASYN=/usr/lib/epics
+# modules
+STREAM=$(SUPPORT)/stream
+ASYN=$(SUPPORT)/asyn
+CALC=$(SUPPORT)/calc
+AUTOSAVE=$(SUPPORT)/autosave
+SSCAN=$(SUPPORT)/sscan
 
 # EPICS_BASE usually appears last so other apps can override stuff:
-EPICS_BASE=/usr/lib/epics
+EPICS_BASE=/opt/epics/base
 
 #Capfast users may need the following definitions
 #CAPFAST_TEMPLATES=

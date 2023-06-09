@@ -16,7 +16,7 @@ record(ao, "$(Sys)$(Dev)Ch$(CH):Gain-SP") {
   field(DESC, "Ch$(CH) gain setpoint")
   field(PREC, "$(PREC)")
 
-  field(FLNK, "$(Sys)$(Dev)DB:WrtComp_")
+#  field(FLNK, "$(Sys)$(Dev)DB:WrtComp_")
   info(autosaveFields_pass0, "VAL")
 }
 
@@ -24,7 +24,7 @@ record(ao, "$(Sys)$(Dev)Ch$(CH):Off-SP") {
   field(DESC, "Ch$(CH) offset setpoint")
   field(PREC, "$(PREC)")
 
-  field(FLNK, "$(Sys)$(Dev)DB:WrtComp_")
+#  field(FLNK, "$(Sys)$(Dev)DB:WrtComp_")
   info(autosaveFields_pass0, "VAL")
 }
 

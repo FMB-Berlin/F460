@@ -1,0 +1,872 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 337
+y 89
+w 570
+h 790
+font "helvetica-medium-r-12.0"
+ctlFont "helvetica-bold-r-12.0"
+btnFont "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 25
+ctlFgColor2 index 30
+ctlBgColor1 index 3
+ctlBgColor2 index 3
+topShadowColor index 0
+botShadowColor index 14
+title "Settings"
+showGrid
+snapToGrid
+gridSize 5
+disableScroll
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 5
+y 275
+w 550
+h 505
+lineColor index 14
+fillColor index 3
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 5
+y 50
+w 550
+h 190
+lineColor index 14
+fillColor index 3
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 0
+y 0
+w 570
+h 25
+font "helvetica-bold-r-18.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 6
+value {
+  "F460 Calibration [$(P)$(R)]"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x -5
+y -125
+w 725
+h 25
+font "helvetica-bold-r-18.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 6
+value {
+  "F460 Calibration Settings [$(P)$(R)]"
+}
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 430
+y 0
+w 140
+h 25
+fgColor index 45
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 14
+label "Close"
+font "helvetica-bold-r-12.0"
+3d
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 5
+y 255
+w 214
+h 17
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Current Calibration (read only)"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 5
+y 30
+w 131
+h 17
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Sensor Calibration"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 85
+w 91
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Offset Readback"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 115
+w 86
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Gain Readback"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 110
+y 80
+w 100
+h 25
+controlPv "$(P)$(R)Ch0:Off-I"
+format "exponential"
+font "courier-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 110
+y 110
+w 100
+h 25
+controlPv "$(P)$(R)Ch0:Gain-I"
+format "exponential"
+font "courier-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 110
+y 170
+w 100
+h 25
+controlPv "$(P)$(R)Ch0:Gain-SP"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 3
+editable
+precision 4
+nullColor index 30
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+id "4"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 110
+y 140
+w 100
+h 25
+controlPv "$(P)$(R)Ch0:Off-SP"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 3
+editable
+precision 4
+nullColor index 30
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 130
+y 55
+w 57
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Channel 0"
+}
+autoSize
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 220
+y 170
+w 100
+h 25
+controlPv "$(P)$(R)Ch1:Gain-SP"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 3
+editable
+precision 4
+nullColor index 30
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+id "4"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 220
+y 110
+w 100
+h 25
+controlPv "$(P)$(R)Ch1:Gain-I"
+format "exponential"
+font "courier-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 220
+y 80
+w 100
+h 25
+controlPv "$(P)$(R)Ch1:Off-I"
+format "exponential"
+font "courier-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 220
+y 140
+w 100
+h 25
+controlPv "$(P)$(R)Ch1:Off-SP"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 3
+editable
+precision 4
+nullColor index 30
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 330
+y 170
+w 100
+h 25
+controlPv "$(P)$(R)Ch2:Gain-SP"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 3
+editable
+precision 4
+nullColor index 30
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+id "4"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 330
+y 110
+w 100
+h 25
+controlPv "$(P)$(R)Ch2:Gain-I"
+format "exponential"
+font "courier-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 330
+y 80
+w 100
+h 25
+controlPv "$(P)$(R)Ch2:Off-I"
+format "exponential"
+font "courier-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 330
+y 140
+w 100
+h 25
+controlPv "$(P)$(R)Ch2:Off-SP"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 3
+editable
+precision 4
+nullColor index 30
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 440
+y 170
+w 100
+h 25
+controlPv "$(P)$(R)Ch3:Gain-SP"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 3
+editable
+precision 4
+nullColor index 30
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+id "4"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 440
+y 110
+w 100
+h 25
+controlPv "$(P)$(R)Ch3:Gain-I"
+format "exponential"
+font "courier-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 440
+y 80
+w 100
+h 25
+controlPv "$(P)$(R)Ch3:Off-I"
+format "exponential"
+font "courier-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 440
+y 140
+w 100
+h 25
+controlPv "$(P)$(R)Ch3:Off-SP"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 3
+editable
+precision 4
+nullColor index 30
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 105
+y 205
+w 440
+h 25
+fgColor index 25
+onColor index 3
+offColor index 3
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(P)$(R)DB:WrtComp_.PROC"
+pressValue "1"
+onLabel "Apply Setpoints"
+offLabel "Apply Setpoints"
+3d
+font "helvetica-bold-r-12.0"
+endObjectProperties
+
+# (Include Widget)
+object includeWidgetClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 15
+y 305
+w 485
+h 90
+fgColor index 14
+includeFileName "F460_curCalib_widget.edl"
+symbols "CH=0"
+endObjectProperties
+
+# (Include Widget)
+object includeWidgetClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 15
+y 430
+w 485
+h 90
+fgColor index 14
+includeFileName "F460_curCalib_widget.edl"
+symbols "CH=1"
+endObjectProperties
+
+# (Include Widget)
+object includeWidgetClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 15
+y 555
+w 485
+h 90
+fgColor index 14
+includeFileName "F460_curCalib_widget.edl"
+symbols "CH=2"
+endObjectProperties
+
+# (Include Widget)
+object includeWidgetClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 15
+y 680
+w 485
+h 90
+fgColor index 14
+includeFileName "F460_curCalib_widget.edl"
+symbols "CH=3"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 285
+w 60
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Channel 0"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 410
+w 60
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Channel 1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 175
+w 75
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Gain Setpoint"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 145
+w 80
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Offset Setpoint"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 240
+y 55
+w 57
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Channel 1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 350
+y 55
+w 57
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Channel 2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 460
+y 55
+w 57
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Channel 3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 535
+w 60
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Channel 2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 660
+w 60
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Channel 3"
+}
+autoSize
+endObjectProperties
+

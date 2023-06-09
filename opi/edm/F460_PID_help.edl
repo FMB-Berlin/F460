@@ -1,0 +1,78 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 251
+y 459
+w 565
+h 265
+font "helvetica-medium-r-12.0"
+ctlFont "helvetica-bold-r-12.0"
+btnFont "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 25
+ctlFgColor2 index 30
+ctlBgColor1 index 3
+ctlBgColor2 index 3
+topShadowColor index 0
+botShadowColor index 14
+title "F460 PID Notes"
+showGrid
+snapToGrid
+gridSize 5
+disableScroll
+endScreenProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 10
+w 532
+h 192
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "The PID loop aims to keep its input at the target value by adjusting the output."
+  "The PID mode choice determines what the input is, e. g., I1+I2."
+  "To configure, set the propodtional and integral gain (Kp and Ki)."
+  "Set appropriate limits for the output and set the output value to a suitable starting value."
+  ""
+  "Reference ist a normalization for the input, i.e., input is devided by the reference."
+  "Chose supervisory to set the reference value directly. "
+  "Chose closed_loop to provide an EPICS PV to use as the reference. Enter PV like: <pv_name> CP"
+  ""
+  "Output mode must be PID!"
+  "Then turn on PID."
+  "The input target is set to the current value of the input when the PID loop is started."
+}
+autoSize
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 196
+y 230
+w 160
+h 25
+fgColor index 45
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 14
+label "Close"
+font "helvetica-bold-r-12.0"
+3d
+endObjectProperties
+

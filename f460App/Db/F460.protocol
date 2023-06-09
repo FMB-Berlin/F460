@@ -111,7 +111,7 @@ getLimit {
     #   device, pid_prefix, command
     out "\$3?";
     in  "\$3?";
-    in  "%(\$1\${2}Lo-I.VAL)f,%(\$1\${2}Hi-I.VAL)f\r";
+    in  "%fV,%(\$1\${2}Hi-I.VAL)fV\r";
 }
 
 setLimit {
@@ -180,7 +180,7 @@ get1PID {
     out "FET:\$3?";
     in  "FET:\$3?";
     # 0,0.0000e+00 V,0.0000e+00 V,0.0000e+00 V,0.0000e+00,0.0000e+00,0.0000e+00,0.0000e+00,0,0,0,8.4429e+04 S,844289
-    in "%(\$1\$2:Enabled-I.VAL)d,%(\$1\$2:InitV-I.VAL)f V,%(\$1\$2:Volts-I.VAL)f V,%(\$1\$2:An1-I.VAL)f V,%(\$1\$2:Proc:Meas-I.VAL)f,%(\$1\$2:Proc:Tgt-I)f,%(\$1\$2:Proc:Diff-I)f,%(\$1\$2:FolErr-I)f,%(\$1\$2:LowDac-I.VAL)d,%(\$1\$2:HiDac-I.VAL)d,%(\$1\$2:LowI-I.VAL)d,%(\$1\$2:Ts-I.VAL)f,%(\$1\$2:TsNum-I.VAL)d\r";
+    in "%(\$1\$2:Enable-I.VAL)d,%(\$1\$2:InitV-I.VAL)f V,%(\$1\$2:Volts-I.VAL)f V,%(\$1\$2:An1-I.VAL)f V,%(\$1\$2:Proc:Meas-I.VAL)f,%(\$1\$2:Proc:Tgt-I)f,%(\$1\$2:Proc:Diff-I)f,%(\$1\$2:FolErr-I)f,%(\$1\$2:LowDac-I.VAL)d,%(\$1\$2:HiDac-I.VAL)d,%(\$1\$2:LowI-I.VAL)d,%(\$1\$2:Ts-I.VAL)f S,%(\$1\$2:TsNum-I.VAL)d\r";
 }
 
 #
@@ -190,8 +190,8 @@ writeFloat {
     # arguments:
     #   device, command
     @mismatch { in $error_string; }
-    out "\$2 %f"; 
-    in  "\$2 %*f";
+    out "\$2 %e";
+    in  "\$2 %*e";
     in "OK\r";
 }
 

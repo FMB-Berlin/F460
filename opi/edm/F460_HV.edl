@@ -1,0 +1,269 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 684
+y 614
+w 500
+h 180
+font "helvetica-medium-r-12.0"
+ctlFont "helvetica-bold-r-12.0"
+btnFont "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 25
+ctlFgColor2 index 30
+ctlBgColor1 index 3
+ctlBgColor2 index 3
+topShadowColor index 0
+botShadowColor index 14
+title "F460 HV Settings"
+showGrid
+snapToGrid
+gridSize 5
+disableScroll
+endScreenProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 0
+y 0
+w 500
+h 25
+font "helvetica-bold-r-18.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 6
+value {
+  "F460 High Voltage [$(P)$(R)]"
+}
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 400
+y 0
+w 100
+h 25
+fgColor index 45
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 14
+label "Close"
+font "helvetica-bold-r-12.0"
+3d
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 185
+y 40
+w 120
+h 25
+fgColor index 25
+bgColor index 3
+selectColor index 3
+inconsistentColor index 35
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(P)$(R)Cmd:HiVoEn"
+indicatorPv "$(P)$(R)HiVoEn-I"
+font "helvetica-bold-r-12.0"
+orientation "horizontal"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 315
+y 110
+w 120
+h 25
+controlPv "$(P)$(R)HiVo-I"
+format "float"
+font "courier-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 185
+y 110
+w 120
+h 25
+controlPv "$(P)$(R)HiVo-SP"
+format "float"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 3
+editable
+precision 4
+nullColor index 30
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+id "4"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 185
+y 75
+w 120
+h 25
+controlPv "$(P)$(R)HiVoVolRbv-I"
+format "float"
+font "courier-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 310
+y 75
+w 70
+h 25
+fgColor index 25
+onColor index 3
+offColor index 3
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(P)$(R)HiVoVolRbv-I.PROC"
+pressValue "1"
+onLabel "Update"
+offLabel "Update"
+3d
+useEnumNumeric
+font "helvetica-bold-r-12.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 185
+y 145
+w 120
+h 25
+controlPv "$(P)$(R)HiVoSup-I"
+format "float"
+font "courier-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 10
+precision 4
+nullColor index 30
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 123
+y 114
+w 48
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Set point"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 90
+y 149
+w 81
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Max supported"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 100
+y 79
+w 71
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Actual output"
+}
+autoSize
+endObjectProperties
+
